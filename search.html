@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results | YouTube Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .filter-chip:hover {
+            background-color: #e5e7eb;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header (same as index.html) -->
+    <header class="bg-gray-900 text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-bars text-xl cursor-pointer"></i>
+                <div class="flex items-center">
+                    <i class="fab fa-youtube text-red-600 text-3xl mr-2"></i>
+                    <span class="text-xl font-bold">YouTube</span>
+                </div>
+            </div>
+            
+            <div class="flex-1 max-w-2xl mx-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search" 
+                           class="w-full py-2 px-4 rounded-l-full bg-gray-800 text-white focus:outline-none">
+                    <button class="bg-gray-700 py-2 px-6 rounded-r-full">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-video text-xl cursor-pointer"></i>
+                <i class="fas fa-bell text-xl cursor-pointer"></i>
+                <a href="profile.html">
+                    <div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center">
+                        <i class="fas fa-user text-white"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Results Content -->
+    <main class="container mx-auto py-6 px-4">
+        <!-- Filters -->
+        <div class="flex flex-wrap gap-2 mb-6">
+            <button class="filter-chip bg-black text-white px-3 py-1 rounded-full text-sm">All</button>
+            <button class="filter-chip bg-gray-200 px-3 py-1 rounded-full text-sm">Videos</button>
+            <button class="filter-chip bg-gray-200 px-3 py-1 rounded-full text-sm">Channels</button>
+            <button class="filter-chip bg-gray-200 px-3 py-1 rounded-full text-sm">Playlists</button>
+            <button class="filter-chip bg-gray-200 px-3 py-1 rounded-full text-sm">Live</button>
+            <button class="filter-chip bg-gray-200 px-3 py-1 rounded-full text-sm">Gaming</button>
+        </div>
+
+        <!-- Search Results -->
+        <div class="space-y-6">
+            <!-- Video Result 1 -->
+            <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="relative w-full md:w-64 flex-shrink-0">
+                    <img src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg" 
+                         alt="Video thumbnail" 
+                         class="w-full h-full object-cover">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">10:30</span>
+                </div>
+                <div class="p-4 flex-1">
+                    <h2 class="text-lg font-medium">How to build a YouTube clone with Tailwind CSS</h2>
+                    <p class="text-gray-600 text-sm mt-1">1.2M views • 3 days ago</p>
+                    <div class="flex items-center mt-2">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" 
+                             alt="Channel avatar" 
+                             class="w-8 h-8 rounded-full mr-2">
+                        <p class="text-gray-600 text-sm">Web Dev Simplified</p>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-2 line-clamp-2">
+                        In this tutorial, we'll build a YouTube clone using Tailwind CSS and HTML. Learn how to create responsive layouts, 
+                        video cards, and navigation bars with modern styling techniques.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Video Result 2 -->
+            <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="relative w-full md:w-64 flex-shrink-0">
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" 
+                         alt="Video thumbnail" 
+                         class="w-full h-full object-cover">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">15:45</span>
+                </div>
+                <div class="p-4 flex-1">
+                    <h2 class="text-lg font-medium">Learn JavaScript in 2023 - Full Course for Beginners</h2>
+                    <p class="text-gray-600 text-sm mt-1">5.7M views • 1 month ago</p>
+                    <div class="flex items-center mt-2">
+                        <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" 
+                             alt="Channel avatar" 
+                             class="w-8 h-8 rounded-full mr-2">
+                        <p class="text-gray-600 text-sm">Programming with Mosh</p>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-2 line-clamp-2">
+                        This complete 2023 JavaScript course for beginners will teach you everything you need to know to get started with 
+                        JavaScript programming. From variables to functions, we cover it all!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Channel Result -->
+            <div class="flex items-center bg-white rounded-lg shadow-md p-4">
+                <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg" 
+                     alt="Channel avatar" 
+                     class="w-16 h-16 rounded-full mr-4">
+                <div>
+                    <h2 class="text-lg font-medium">Linus Tech Tips</h2>
+                    <p class="text-gray-600 text-sm">15.2M subscribers • 4,256 videos</p>
+                    <p class="text-gray-600 text-sm mt-1 line-clamp-1">
+                        Tech can be complicated; we try to make it easy. Linus Tech Tips is a passionate team of tech enthusiasts.
+                    </p>
+                </div>
+                <button class="ml-auto bg-red-600 text-white px-4 py-1 rounded-full text-sm">Subscribe</button>
+            </div>
+
+            <!-- Video Result 3 -->
+            <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="relative w-full md:w-64 flex-shrink-0">
+                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg" 
+                         alt="Video thumbnail" 
+                         class="w-full h-full object-cover">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">22:18</span>
+                </div>
+                <div class="p-4 flex-1">
+                    <h2 class="text-lg font-medium">Building a Gaming PC - Step by Step Guide</h2>
+                    <p class="text-gray-600 text-sm mt-1">3.4M views • 2 weeks ago</p>
+                    <div class="flex items-center mt-2">
+                        <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg" 
+                             alt="Channel avatar" 
+                             class="w-8 h-8 rounded-full mr-2">
+                        <p class="text-gray-600 text-sm">Linus Tech Tips</p>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-2 line-clamp-2">
+                        We build a high-end gaming PC from scratch, explaining each component and installation step. Perfect for beginners 
+                        looking to build their first gaming rig.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                    <i class="fab fa-youtube text-red-600 text-2xl"></i>
+                    <span class="text-lg font-bold">YouTube Clone</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-gray-400">About</a>
+                    <a href="#" class="hover:text-gray-400">Privacy</a>
+                    <a href="#" class="hover:text-gray-400">Terms</a>
+                    <a href="#" class="hover:text-gray-400">Contact</a>
+                </div>
+            </div>
+            <div class="mt-4 text-center md:text-left text-gray-400 text-sm">
+                &copy; 2023 YouTube Clone. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
