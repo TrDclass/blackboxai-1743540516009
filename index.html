@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .video-card:hover .video-thumbnail {
+            transform: scale(1.03);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-gray-900 text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-bars text-xl cursor-pointer"></i>
+                <div class="flex items-center">
+                    <i class="fab fa-youtube text-red-600 text-3xl mr-2"></i>
+                    <span class="text-xl font-bold">YouTube</span>
+                </div>
+            </div>
+            
+            <div class="flex-1 max-w-2xl mx-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search" 
+                           class="w-full py-2 px-4 rounded-l-full bg-gray-800 text-white focus:outline-none">
+                    <button class="bg-gray-700 py-2 px-6 rounded-r-full">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-video text-xl cursor-pointer"></i>
+                <i class="fas fa-bell text-xl cursor-pointer"></i>
+                <a href="profile.html">
+                    <div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center">
+                        <i class="fas fa-user text-white"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-6 px-4">
+        <!-- Categories -->
+        <div class="flex space-x-2 overflow-x-auto pb-4 mb-6 scrollbar-hide">
+            <button class="px-3 py-1 bg-gray-800 text-white rounded-full whitespace-nowrap">All</button>
+            <button class="px-3 py-1 bg-gray-200 rounded-full whitespace-nowrap">Music</button>
+            <button class="px-3 py-1 bg-gray-200 rounded-full whitespace-nowrap">Gaming</button>
+            <button class="px-3 py-1 bg-gray-200 rounded-full whitespace-nowrap">Live</button>
+            <button class="px-3 py-1 bg-gray-200 rounded-full whitespace-nowrap">Programming</button>
+            <button class="px-3 py-1 bg-gray-200 rounded-full whitespace-nowrap">Comedy</button>
+            <button class="px-3 py-1 bg-gray-200 rounded-full whitespace-nowrap">Podcasts</button>
+        </div>
+
+        <!-- Video Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Video Card 1 -->
+            <div class="video-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg" 
+                         alt="Video thumbnail" 
+                         class="w-full h-48 object-cover video-thumbnail">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">10:30</span>
+                </div>
+                <div class="p-3">
+                    <div class="flex">
+                        <div class="flex-shrink-0 mr-3">
+                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" 
+                                 alt="Channel avatar" 
+                                 class="w-10 h-10 rounded-full">
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-gray-900 line-clamp-2">How to build a YouTube clone with Tailwind CSS</h3>
+                            <p class="text-gray-600 text-sm mt-1">Web Dev Simplified</p>
+                            <p class="text-gray-600 text-sm">1.2M views • 3 days ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Card 2 -->
+            <div class="video-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" 
+                         alt="Video thumbnail" 
+                         class="w-full h-48 object-cover video-thumbnail">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">15:45</span>
+                </div>
+                <div class="p-3">
+                    <div class="flex">
+                        <div class="flex-shrink-0 mr-3">
+                            <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" 
+                                 alt="Channel avatar" 
+                                 class="w-10 h-10 rounded-full">
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-gray-900 line-clamp-2">Learn JavaScript in 2023 - Full Course for Beginners</h3>
+                            <p class="text-gray-600 text-sm mt-1">Programming with Mosh</p>
+                            <p class="text-gray-600 text-sm">5.7M views • 1 month ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Card 3 -->
+            <div class="video-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg" 
+                         alt="Video thumbnail" 
+                         class="w-full h-48 object-cover video-thumbnail">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">22:18</span>
+                </div>
+                <div class="p-3">
+                    <div class="flex">
+                        <div class="flex-shrink-0 mr-3">
+                            <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg" 
+                                 alt="Channel avatar" 
+                                 class="w-10 h-10 rounded-full">
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-gray-900 line-clamp-2">Building a Gaming PC - Step by Step Guide</h3>
+                            <p class="text-gray-600 text-sm mt-1">Linus Tech Tips</p>
+                            <p class="text-gray-600 text-sm">3.4M views • 2 weeks ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Card 4 -->
+            <div class="video-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg" 
+                         alt="Video thumbnail" 
+                         class="w-full h-48 object-cover video-thumbnail">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">8:52</span>
+                </div>
+                <div class="p-3">
+                    <div class="flex">
+                        <div class="flex-shrink-0 mr-3">
+                            <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg" 
+                                 alt="Channel avatar" 
+                                 class="w-10 h-10 rounded-full">
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-gray-900 line-clamp-2">Top 10 VS Code Extensions for 2023</h3>
+                            <p class="text-gray-600 text-sm mt-1">Fireship</p>
+                            <p class="text-gray-600 text-sm">1.8M views • 5 days ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                    <i class="fab fa-youtube text-red-600 text-2xl"></i>
+                    <span class="text-lg font-bold">YouTube Clone</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-gray-400">About</a>
+                    <a href="#" class="hover:text-gray-400">Privacy</a>
+                    <a href="#" class="hover:text-gray-400">Terms</a>
+                    <a href="#" class="hover:text-gray-400">Contact</a>
+                </div>
+            </div>
+            <div class="mt-4 text-center md:text-left text-gray-400 text-sm">
+                &copy; 2023 YouTube Clone. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
